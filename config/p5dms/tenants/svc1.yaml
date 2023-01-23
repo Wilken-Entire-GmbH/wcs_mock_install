@@ -1,0 +1,11 @@
+# P5/2 DMS WCS3 Mockservice Tenant Configuration
+
+# tenant 
+TENANT_CAPTION: SVC1 WCS3 Mock
+
+# http port of service
+WDSMOCK_HTTP_PORT: 6910
+
+# extend logging of soap calls
+WDSMOCK_SOAP_LOG: true 
+WDSMOCK_SOAPCONFIG_LOG: true

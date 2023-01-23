@@ -1,0 +1,28 @@
+server:
+  swagger:
+    enable: WDS_SWAGGERUI_ENABLE
+    stats: WDS_SWAGGERSTATS
+  authorization:
+    systemPassword: WDS_SYSTEMPASSWORD
+metric:
+  enabled: WDS_METRIC_ENABLE
+  tenantid: WDS_TENANTID
+retrieval:
+  url: RETRIEVAL_URL
+context:
+  ContentServiceMock: 
+    application: 
+      title: TENANT_CAPTION
+    server: 
+      http: 
+        port: WDSMOCK_HTTP_PORT 
+      soap:
+        url: WDSMOCK_SOAP_URL 
+        log: WDSMOCK_SOAP_LOG 
+      soapConfig:
+        url: WDSMOCK_SOAPCONFIG_URL 
+        log: WDSMOCK_SOAPCONFIG_LOG
+    mock: 
+      store: WDSMOCK_STORE_FOLDER
+    propertyStore: 
+      path: WDSMOCK_PROPERTYSTORE_PATH 
