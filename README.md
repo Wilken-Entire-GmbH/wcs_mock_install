@@ -1,6 +1,30 @@
-# Wilken Contentservice Mock Windows Installer
+# Windows Installation des P5DMS WCS3 Mock
 
-Installation des Contentservice Mock auf Windows basierten Server und Client Systemen. Nach Installation können bis zu 5 Instanzen des Mocks lokal betrieben werden.
+## P5DMS WCS3 Mock
+Der P5DMS WCS3 Mock stellt P5 Anwendungsentwicklern und der QS eine komplett funktionsfähige WCS3 Implementierung zur Verfügung, ohne die Notwendigkeit ein "echtes" DMS zu installieren.
+
+Der Service kann sehr einfach auf jedem Windows Server oder Client installiert werden. Nach Eintrag der DmsUrl in P5 simuliert der Mock ein DMS System.
+
+Die Daten werden dabei in der Installation lokal persistiert. Die Speicherfähigkeit des Mocks ist limitiert, ein paar tausend Dokumente stellen aber in der Regel, bei verfügbarem lokalem Speicherplatz, kein Problem dar.
+
+### Erweiterter Funktionsumfang
+Neben der Soap Schnittstelle, steht der WCS3 Funktionsumfang auch via REST zur Verfügung. Zum Kennenlernen sind die Methoden über eine Swagger-UI verfügbar. 
+
+Zusätzlich sind noch erweiterte Funktionalitäten via REST verfügbar: 
+
+  * Zurücksetzen
+
+    Der Mock kann einfach in den initialen Zustand zurückgesetzt werden.
+  * Statusanzeige
+
+    Statusinformationen über den aktuellen Inhalt des Mocks.
+  * Snapshot Verwaltung
+
+    Ähnlich wie bei einer VM können vom aktuellen Inhalt Snapshots erzeugt werden.
+    
+    Das ist ideal zum Testen, da der ContentService auf vereinbarte Inhalte zurückgesetzt werden kann. Die Snapshots können auch als .zip  Dateien heruntergeladen und in eine andere Mock Installation wieder eingespielt werden.
+
+
 
 ## Installationsvoraussetzungen 
   * Zugriff auf das Internet (Herunterladen der Installation)
@@ -47,7 +71,7 @@ SOAP_HOSTNAME: 127.0.0.1
 ## Windows Service Verwaltungsfunktionen
 Für die Windows Service Installation sind lokale Adminrechte erforderlich. Die Bat-Skripte für Installation/Deinstallation, Starten/Stoppen befinden sich unter \control. 
 
-Folgende Beispiele sind abgebildet für den Mockservice svc1.
+Die folgenden Beispiele verwenden den Mockservice svc1.
 
 ### Service installieren 
 ```bash
@@ -80,7 +104,7 @@ Der Service wird angehalten.
 wds_remove svc1
 ``` 
 
-Der Service wird vom Rechner entfernt und wird unter Dienste nicht mehr angezeigt.
+Der Service wird vom Rechner entfernt und wird unter Dienste nicht mehr angezeigt. Sind alle Dienste entfernt, kann die komplette Installation von der Platte gelöscht werden.
 
 ## Mockservice konfigurieren
 Der Mockservice wird bereits vorkonfiguriert ausgeliefert. Diese Konfiguation kann nach den individuellen Bedürfnissen angepasst werden. 
