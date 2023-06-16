@@ -26,3 +26,5 @@ context:
       store: WDSMOCK_STORE_FOLDER
     propertyStore: 
       path: WDSMOCK_PROPERTYSTORE_PATH 
+    viewer: 
+      serverURL: WDSMOCK_VIEWER_URL 

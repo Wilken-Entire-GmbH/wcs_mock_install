@@ -3,3 +3,4 @@
 WDSMOCK_SOAP_URL: http://${env.SOAP_HOSTNAME}:${env.WDSMOCK_HTTP_PORT}/soap/ContentService
 WDSMOCK_SOAPCONFIG_URL: http://${env.SOAP_HOSTNAME}:${env.WDSMOCK_HTTP_PORT}/soap/ContentConfigurationService
 WDSMOCK_PROPERTYSTORE_PATH: ${env.WDS_RUNTIME_DIR}/store.json
+WDSMOCK_VIEWER_URL: http://${env.SOAP_HOSTNAME}:${env.WDSMOCK_HTTP_PORT}/viewer
